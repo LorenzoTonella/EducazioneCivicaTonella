@@ -37,6 +37,10 @@ namespace EsercizioGITv0._1
             }
                 
         }
+        public bool SecondoPunto()
+        {
+            return false;
+        }
 
                
 
