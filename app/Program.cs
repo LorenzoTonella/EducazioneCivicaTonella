@@ -1,2 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace EsercizioGITv0._1
+{
+    class Crittografia
+    {
+        
+        public bool PrimoPunto()
+        {
+            return false;
+                
+        }
+
+               
+
+
+            }
+        }
+    
