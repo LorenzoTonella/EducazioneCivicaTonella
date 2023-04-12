@@ -72,6 +72,11 @@ namespace EsercizioGITv0._1
             }
                 
         }
+        public static bool TerzoPunto()
+        {
+            return false; //fare il commit semaforo rosso
+                
+        }
 
                
 
