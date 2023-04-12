@@ -9,6 +9,7 @@ namespace EsercizioGITv0._1
             PrimoPunto();
             SecondoPunto();
             TerzoPunto();
+            QuartoPunto();
         }
         int counter=0;
         
@@ -99,6 +100,11 @@ namespace EsercizioGITv0._1
             {
                 return false;
             }
+                
+        }
+        public static bool QuartoPunto()
+        {
+             return false;
                 
         }
 
