@@ -8,6 +8,7 @@ namespace EsercizioGITv0._1
         {
             PrimoPunto();
             SecondoPunto();
+            TerzoPunto();
         }
         int counter=0;
         
@@ -74,7 +75,30 @@ namespace EsercizioGITv0._1
         }
         public static bool TerzoPunto()
         {
-            return false; //fare il commit semaforo rosso
+             try{
+                Console.Write("Inserisci una stringa: ");
+                string s = Console.ReadLine();
+                Console.Write("Inserisci un numero: ");
+                int n = int.Parse(Console.ReadLine());
+             // Punto 3
+                int sum = 0;
+
+                foreach (char c in s)
+                {
+                    int value = char.ToLower(c) - 'a' + 1;
+                    sum += value;
+                    Console.WriteLine(c + " = " + value);
+                }
+
+                int result3 = sum * n;
+
+                Console.WriteLine($"Punto 3: (" + sum + ") * " + n + " = " + result3);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
                 
         }
 
