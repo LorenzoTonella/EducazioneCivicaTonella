@@ -104,7 +104,29 @@ namespace EsercizioGITv0._1
         }
         public static bool QuartoPunto()
         {
-             return false;
+             try{
+                Console.Write("Inserisci una stringa: ");
+                string s = Console.ReadLine();
+                Console.Write("Inserisci un numero: ");
+                int n = int.Parse(Console.ReadLine());
+              // Punto 4
+                int product = 1;
+                foreach (char c in s)
+                {
+                    if (char.IsLetter(c))
+                    {
+                        int value = char.ToLower(c) - 'a' + 1;
+                        product *= value;
+                    }
+                }
+                double result4 = Math.Ceiling((double)product / n);
+                Console.WriteLine($"Punto 4: {result4}");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
                 
         }
 
