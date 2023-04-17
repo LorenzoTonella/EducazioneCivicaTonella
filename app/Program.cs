@@ -50,6 +50,8 @@ namespace EsercizioGITv0._1
         static string result1 = "";
         static string result2 ="";
         static int result5=0;
+        static int result7=0;
+        
 
 
         
@@ -207,12 +209,33 @@ namespace EsercizioGITv0._1
             
                 
         }
-        public static bool SettimoPunto(string s,int n)
+        public static void SettimoPunto(string s,int n)
         {
             
             
             
-                 return false;
+                 
+                 try{
+                
+                
+                
+                n = counter;
+                if (n % 2 == 0)
+                {
+                    TerzoPunto(s, n);
+                }
+                else
+                {
+                    QuartoPunto(s, n);
+                }
+                
+                
+            
+            }
+            catch
+            {
+                
+            }
             
                 
         }
