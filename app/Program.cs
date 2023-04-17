@@ -4,23 +4,56 @@ namespace EsercizioGITv0._1
 {
     class Crittografia
     {
-        public static void Main()
+         static void Main(string[] args)
         {
-            PrimoPunto();
-            SecondoPunto();
-            TerzoPunto();
-            QuartoPunto();
-            QuintoPunto();
-        }
-        int counter=0;
-        
-        public static bool PrimoPunto()
-        {
-            try{
-            Console.Write("Inserisci una stringa: ");
+             int restart = 0;
+            do{
+                Console.Write("Inserisci una stringa: ");
                 string s = Console.ReadLine();
                 Console.Write("Inserisci un numero: ");
                 int n = int.Parse(Console.ReadLine());
+                Console.Write("Che funzione vuoi eseguire? ");
+                int funz=int.Parse(Console.ReadLine());
+                switch(funz)
+                {
+                    case 1: PrimoPunto(s, n);
+                    break;
+                    case 2: SecondoPunto(s, n);
+                    break;
+                    case 3: TerzoPunto(s, n);
+                    break;
+                    case 4: QuartoPunto(s, n);
+                    break;
+                    case 5: QuintoPunto(s, n);
+                    break;
+                    
+                }
+                
+
+
+                Console.Write("Rieseguire? 1/0: ");
+                restart = int.Parse(Console.ReadLine());
+            }while (restart == 1);
+            
+        
+        }
+        
+        static string s ="";
+        static int n = 0;
+        static int counter=0;
+        static int result3 = 0;
+        static double result4 = 0;
+        static string result1 = "";
+        static string result2 ="";
+        static int result5=0;
+
+
+        
+        
+        public static void PrimoPunto(string s,int n)
+        {
+            try{
+            
                 
 
                 // Punto 1
@@ -35,23 +68,21 @@ namespace EsercizioGITv0._1
                         arr1[i] = c;
                     }
                 }
-                string result1 = new string(arr1);
+                result1 = new string(arr1);
                 Console.WriteLine($"Punto 1: {result1}");
-                return true;
+                
+                
             }
             catch
             {
-                return false;
+                
             }
                 
         }
-        public static bool SecondoPunto()
+        public static void SecondoPunto(string s,int n)
         {
             try{
-                Console.Write("Inserisci una stringa: ");
-                string s = Console.ReadLine();
-                Console.Write("Inserisci un numero: ");
-                int n = int.Parse(Console.ReadLine());
+                
             // Punto 2
                 char[] arr2 = s.ToCharArray();
                 for (int i = 0; i < arr2.Length; i++)
@@ -64,24 +95,21 @@ namespace EsercizioGITv0._1
                         arr2[i] = c;
                     }
                 }
-                string result2 = new string(arr2);
+                result2 = new string(arr2);
                 Console.WriteLine($"Punto 2: {result2}");
 
-                return true;
+                
             }
             catch
             {
-                return false;
+                
             }
                 
         }
-        public static bool TerzoPunto()
+        public static void TerzoPunto(string s,int n)
         {
              try{
-                Console.Write("Inserisci una stringa: ");
-                string s = Console.ReadLine();
-                Console.Write("Inserisci un numero: ");
-                int n = int.Parse(Console.ReadLine());
+                
              // Punto 3
                 int sum = 0;
 
@@ -92,24 +120,21 @@ namespace EsercizioGITv0._1
                     Console.WriteLine(c + " = " + value);
                 }
 
-                int result3 = sum * n;
+                 result3 = sum * n;
 
                 Console.WriteLine($"Punto 3: (" + sum + ") * " + n + " = " + result3);
-                return true;
+                
             }
             catch
             {
-                return false;
+               
             }
                 
         }
-        public static bool QuartoPunto()
+        public static void QuartoPunto(string s,int n)
         {
              try{
-                Console.Write("Inserisci una stringa: ");
-                string s = Console.ReadLine();
-                Console.Write("Inserisci un numero: ");
-                int n = int.Parse(Console.ReadLine());
+                
               // Punto 4
                 int product = 1;
                 foreach (char c in s)
@@ -118,23 +143,46 @@ namespace EsercizioGITv0._1
                     {
                         int value = char.ToLower(c) - 'a' + 1;
                         product *= value;
+                        
+                        Console.WriteLine(c + " = " + value);
                     }
                 }
-                double result4 = Math.Ceiling((double)product / n);
-                Console.WriteLine($"Punto 4: {result4}");
-                return true;
+                 result4 = Math.Ceiling((double)product / n);
+                Console.WriteLine($"Punto 4: (" + product + ") / " + n + " = " + result4);
+                
             }
             catch
             {
-                return false;
+                
             }
                 
         }
-        public static bool QuintoPunto()
+        public static void QuintoPunto(string s,int n)
         {
             
             
-                return false;
+            
+                try{
+                
+              // Punto 5
+                
+                if (n % 2 == 0)
+                {
+                     TerzoPunto(s, n);
+                }
+                else
+                {
+                     QuartoPunto(s, n);
+                }
+
+                counter++;
+                
+            
+            }
+            catch
+            {
+                
+            }
             
                 
         }
