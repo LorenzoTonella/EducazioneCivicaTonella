@@ -26,6 +26,8 @@ namespace EsercizioGITv0._1
                     break;
                     case 5: QuintoPunto(s, n);
                     break;
+                    case 6: SestoPunto(s, n);
+                    break;
                     
                 }
                 
@@ -183,6 +185,13 @@ namespace EsercizioGITv0._1
             {
                 
             }
+        }
+            public static bool SestoPunto(string s,int n)
+        {
+            
+            
+            
+                return false;
             
                 
         }
@@ -191,5 +200,6 @@ namespace EsercizioGITv0._1
 
 
             }
-        }
+}
+        
     
