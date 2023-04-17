@@ -186,12 +186,22 @@ namespace EsercizioGITv0._1
                 
             }
         }
-            public static bool SestoPunto(string s,int n)
+            public static void SestoPunto(string s,int n)
         {
             
             
             
-                return false;
+                 try{
+                
+                
+                Console.WriteLine($"Punto 6: {counter}");
+                
+            
+            }
+            catch
+            {
+                
+            }
             
                 
         }
